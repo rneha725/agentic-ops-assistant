@@ -12,7 +12,40 @@
         <maven.compiler.release>27</maven.compiler.release>
         <maven.compiler.enablePreview>true</maven.compiler.enablePreview>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring.ai.starter.ollama>2.0.1</spring.ai.starter.ollama>
+        <spring.framework>4.1.1</spring.framework>
+        <netty.version>4.2.18.Final</netty.version>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-starter-model-ollama</artifactId>
+            <version>${spring.ai.starter.ollama}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring.framework}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-dependencies</artifactId>
+            <version>${spring.framework}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>${spring.framework}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>${netty.version}</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>

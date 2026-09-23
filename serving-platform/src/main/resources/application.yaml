@@ -1,0 +1,10 @@
+# Select Ollama as your primary chat model
+spring:
+  ai:
+    model:
+      chat: ollama
+
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        model: llama3.1:8b
